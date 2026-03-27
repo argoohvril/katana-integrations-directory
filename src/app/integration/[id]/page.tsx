@@ -48,7 +48,7 @@ export default function IntegrationPage({
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header
-        className="border-b border-border"
+        className="sticky top-0 z-50 border-b border-border"
         style={{ backgroundColor: "rgb(9, 35, 50)" }}
       >
         <div className="wrapper py-4 flex items-center gap-4">

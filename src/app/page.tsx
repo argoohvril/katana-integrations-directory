@@ -64,7 +64,7 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Header */}
       <header
-        className="border-b border-border"
+        className="sticky top-0 z-50 border-b border-border"
         style={{ backgroundColor: "rgb(9, 35, 50)" }}
       >
         <div className="wrapper py-6">
@@ -79,7 +79,7 @@ export default function Home() {
             <div>
               <h1 className="headline-sm text-white">Integrations Directory</h1>
               <p className="body-sm" style={{ color: "rgba(255,255,255,0.6)" }}>
-                {integrations.length} integrations across {CATEGORIES.length} categories — sourced from customer VoC research
+                Build your perfect integrations stack with Katana
               </p>
             </div>
           </div>
