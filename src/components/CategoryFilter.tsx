@@ -19,10 +19,10 @@ export default function CategoryFilter({
     <div className="flex flex-wrap gap-2">
       <button
         onClick={() => onChange(null)}
-        className={`label-sm rounded-sm px-3 py-1.5 shadow-xs transition-colors duration-150 ${
+        className={`label-sm rounded-full px-4 py-1.5 transition-colors duration-150 border ${
           selected === null
-            ? "bg-primary text-primary-foreground"
-            : "bg-card text-card-foreground border border-border hover:bg-hover"
+            ? "bg-[#cdbdff] border-[#cdbdff] text-black"
+            : "bg-transparent text-foreground border-border hover:bg-hover"
         }`}
       >
         All ({total})
@@ -31,10 +31,10 @@ export default function CategoryFilter({
         <button
           key={cat.slug}
           onClick={() => onChange(selected === cat.slug ? null : cat.slug)}
-          className={`label-sm rounded-sm px-3 py-1.5 shadow-xs transition-colors duration-150 ${
+          className={`label-sm rounded-full px-4 py-1.5 transition-colors duration-150 border ${
             selected === cat.slug
-              ? "bg-primary text-primary-foreground"
-              : "bg-card text-card-foreground border border-border hover:bg-hover"
+              ? "bg-[#cdbdff] border-[#cdbdff] text-black"
+              : "bg-transparent text-foreground border-border hover:bg-hover"
           }`}
         >
           {cat.label}

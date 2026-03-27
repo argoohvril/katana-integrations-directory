@@ -241,10 +241,10 @@
     --gray-900: oklch(0.2977 0.0073 274.72);
     --gray-950: oklch(0.2207 0.0073 274.72);
 
-    --background: var(--gray-100);
-    --foreground: var(--gray-900);
-    --card: var(--white);
-    --card-foreground: var(--gray-900);
+    --background: var(--beige-200);
+    --foreground: var(--black);
+    --card: var(--beige-100);
+    --card-foreground: var(--black);
     --popover: var(--white);
     --popover-foreground: var(--gray-900);
     --primary: var(--blue-700);
@@ -261,10 +261,10 @@
     --destructive-foreground: var(--white);
     --accent: oklch(0 0 0 / 9%);
     --accent-foreground: var(--gray-900);
-    --border: oklch(0.9428 0 0);
-    --input: var(--gray-400);
-    --ring: var(--gray-200);
-    --hover: var(--blue-50);
+    --border: var(--beige-400);
+    --input: var(--beige-500);
+    --ring: var(--pastel-purple);
+    --hover: var(--beige-300);
     --icon: var(--gray-400);
     --chart-1: var(--red-400);
     --chart-2: oklch(0.6 0.118 184.704);

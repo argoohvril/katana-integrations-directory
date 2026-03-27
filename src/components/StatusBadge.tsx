@@ -6,23 +6,23 @@ const STATUS_CONFIG: Record<
 > = {
   native: {
     label: "Native",
-    className: "bg-green-100 text-green-800",
+    className: "bg-[#d4e5ce] text-[#132f05]",
   },
   extensiv: {
     label: "Via Extensiv",
-    className: "bg-amber-100 text-amber-800",
+    className: "bg-[#ffe3b8] text-[#442a31]",
   },
   "zapier-make": {
     label: "Via Zapier / Make",
-    className: "bg-blue-100 text-blue-800",
+    className: "bg-[#cdbdff] text-[#092332]",
   },
   api: {
     label: "API Only",
-    className: "bg-purple-100 text-purple-800",
+    className: "bg-[#ffcecd] text-[#442a31]",
   },
   requested: {
     label: "Requested",
-    className: "bg-gray-100 text-gray-600",
+    className: "bg-border text-foreground opacity-70",
   },
 };
 
@@ -30,19 +30,19 @@ const DEMAND_CONFIG: Record<DemandLevel, { label: string; className: string }> =
   {
     "very-high": {
       label: "Very High Demand",
-      className: "bg-red-100 text-red-700",
+      className: "bg-[#eeff38] text-black",
     },
     high: {
       label: "High Demand",
-      className: "bg-orange-100 text-orange-700",
+      className: "bg-[#ffe3b8] text-black",
     },
     medium: {
       label: "Medium Demand",
-      className: "bg-blue-100 text-blue-700",
+      className: "bg-border text-foreground",
     },
     low: {
       label: "Low Demand",
-      className: "bg-gray-100 text-gray-500",
+      className: "bg-border text-foreground opacity-70",
     },
   };
 
@@ -57,7 +57,7 @@ interface DemandBadgeProps {
 export function StatusBadge({ status }: StatusBadgeProps) {
   const { label, className } = STATUS_CONFIG[status];
   return (
-    <span className={`label-xs inline-block rounded-sm px-2 py-0.5 ${className}`}>
+    <span className={`label-xs inline-block rounded-[6px] px-2.5 py-1 ${className}`}>
       {label}
     </span>
   );
@@ -66,7 +66,7 @@ export function StatusBadge({ status }: StatusBadgeProps) {
 export function DemandBadge({ demand }: DemandBadgeProps) {
   const { label, className } = DEMAND_CONFIG[demand];
   return (
-    <span className={`label-xs inline-block rounded-sm px-2 py-0.5 ${className}`}>
+    <span className={`label-xs inline-block rounded-[6px] px-2.5 py-1 ${className}`}>
       {label}
     </span>
   );

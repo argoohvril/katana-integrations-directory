@@ -65,20 +65,20 @@ export default function Home() {
       {/* Header */}
       <header
         className="sticky top-0 z-50 border-b border-border"
-        style={{ backgroundColor: "rgb(9, 35, 50)" }}
+        style={{ backgroundColor: "#092332" }}
       >
-        <div className="wrapper py-6">
+        <div className="wrapper py-5">
           <div className="flex items-center gap-4">
             <Image
               src="/katana-logo.svg"
               alt="Katana"
-              width={40}
-              height={40}
+              width={36}
+              height={36}
               className="rounded-sm"
             />
             <div>
-              <h1 className="headline-sm text-white">Integrations Directory</h1>
-              <p className="body-sm" style={{ color: "rgba(255,255,255,0.6)" }}>
+              <h1 className="title-lg text-white">Integrations Directory</h1>
+              <p className="body-sm" style={{ color: "rgba(255,255,255,0.5)" }}>
                 Build your perfect integrations stack with Katana
               </p>
             </div>

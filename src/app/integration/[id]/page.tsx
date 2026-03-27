@@ -32,7 +32,7 @@ export default function IntegrationPage({
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <p className="title-lg text-foreground mb-2">Integration not found</p>
-          <Link href="/" className="body-md text-primary hover:underline">
+          <Link href="/" className="body-md text-foreground opacity-70 hover:underline">
             Back to directory
           </Link>
         </div>
@@ -49,7 +49,7 @@ export default function IntegrationPage({
       {/* Header */}
       <header
         className="sticky top-0 z-50 border-b border-border"
-        style={{ backgroundColor: "rgb(9, 35, 50)" }}
+        style={{ backgroundColor: "#092332" }}
       >
         <div className="wrapper py-4 flex items-center gap-4">
           <Image
@@ -84,12 +84,12 @@ export default function IntegrationPage({
               <div className="flex flex-wrap items-center gap-2 mt-2">
                 <StatusBadge status={integration.status} />
                 <DemandBadge demand={integration.demand} />
-                <span className="label-xs inline-block rounded-sm bg-blue-100 px-2 py-0.5 text-primary">
+                <span className="label-xs inline-block rounded-[6px] bg-border px-2.5 py-1 text-foreground">
                   {integration.category}
                 </span>
               </div>
               {integration.description && (
-                <p className="body-md text-text-secondary mt-3 max-w-2xl">
+                <p className="body-md mt-3 max-w-2xl" style={{ color: "rgba(0,0,0,0.7)" }}>
                   {integration.description}
                 </p>
               )}
@@ -98,7 +98,7 @@ export default function IntegrationPage({
                   href={`https://${integration.website}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 body-sm text-primary hover:underline"
+                  className="inline-flex items-center gap-1.5 body-sm text-foreground opacity-70 hover:opacity-100 hover:underline"
                 >
                   <Globe size={14} />
                   {integration.website}
@@ -108,20 +108,20 @@ export default function IntegrationPage({
             </div>
           </div>
 
-          {/* What it does + How customers use it */}
+          {/* Best for + Main use cases */}
           <div className="grid gap-4 sm:grid-cols-2">
-            <div className="rounded-md border border-border bg-card p-6 shadow-sm">
+            <div className="rounded-[16px] border border-border bg-card p-6">
               <div className="flex items-center gap-2 mb-2">
-                <Sparkles size={16} className="text-primary" />
+                <Sparkles size={16} className="text-foreground opacity-50" />
                 <h2 className="title-sm text-card-foreground">Best for</h2>
               </div>
               <p className="body-md text-card-foreground">
                 {integration.whatItDoes}
               </p>
             </div>
-            <div className="rounded-md border border-border bg-card p-6 shadow-sm">
+            <div className="rounded-[16px] border border-border bg-card p-6">
               <div className="flex items-center gap-2 mb-2">
-                <Zap size={16} className="text-primary" />
+                <Zap size={16} className="text-foreground opacity-50" />
                 <h2 className="title-sm text-card-foreground">
                   Main use cases
                 </h2>
@@ -134,9 +134,9 @@ export default function IntegrationPage({
 
           {/* How to Connect */}
           {integration.howToConnect && (
-            <div className="rounded-md border border-border bg-card shadow-sm overflow-hidden">
+            <div className="rounded-[16px] border border-border bg-card overflow-hidden">
               <div className="flex items-center gap-2 px-6 py-4 border-b border-border">
-                <Plug size={18} className="text-primary" />
+                <Plug size={18} className="text-foreground opacity-50" />
                 <h2 className="title-md text-card-foreground">How to Connect</h2>
               </div>
               <div className="px-6 py-5">
@@ -149,13 +149,13 @@ export default function IntegrationPage({
 
           {/* Connector Cost */}
           {integration.connectorCost && (
-            <div className="rounded-md border border-amber-200 bg-amber-50 shadow-sm overflow-hidden">
-              <div className="flex items-center gap-2 px-6 py-4 border-b border-amber-200">
-                <Link2 size={18} className="text-amber-700" />
-                <h2 className="title-md text-amber-900">Connector Cost</h2>
+            <div className="rounded-[16px] border border-[rgba(205,189,255,0.5)] bg-[rgba(205,189,255,0.2)] overflow-hidden">
+              <div className="flex items-center gap-2 px-6 py-4 border-b border-[rgba(205,189,255,0.5)]">
+                <Link2 size={18} className="text-foreground opacity-60" />
+                <h2 className="title-md text-foreground">Connector Cost</h2>
               </div>
               <div className="px-6 py-5">
-                <p className="body-md text-amber-800">
+                <p className="body-md text-foreground" style={{ color: "rgba(0,0,0,0.8)" }}>
                   {integration.connectorCost}
                 </p>
               </div>
@@ -164,13 +164,13 @@ export default function IntegrationPage({
 
           {/* Key Pain Point */}
           {integration.keyPainPoint && (
-            <div className="rounded-md border border-amber-200 bg-amber-50 shadow-sm overflow-hidden">
-              <div className="flex items-center gap-2 px-6 py-4 border-b border-amber-200">
-                <TriangleAlert size={18} className="text-amber-700" />
-                <h2 className="title-md text-amber-900">Key Pain Point</h2>
+            <div className="rounded-[16px] border border-[#ffe3b8] bg-[rgba(255,227,184,0.3)] overflow-hidden">
+              <div className="flex items-center gap-2 px-6 py-4 border-b border-[#ffe3b8]">
+                <TriangleAlert size={18} className="text-foreground opacity-60" />
+                <h2 className="title-md text-foreground">Key Pain Point</h2>
               </div>
               <div className="px-6 py-5">
-                <p className="body-md text-amber-800">
+                <p className="body-md" style={{ color: "rgba(0,0,0,0.8)" }}>
                   {integration.keyPainPoint}
                 </p>
               </div>
@@ -181,14 +181,14 @@ export default function IntegrationPage({
           {integration.tags && integration.tags.length > 0 && (
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <Tag size={16} className="text-primary" />
+                <Tag size={16} className="text-foreground opacity-50" />
                 <h2 className="title-sm text-foreground">Tags</h2>
               </div>
               <div className="flex flex-wrap gap-2">
                 {integration.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="label-sm rounded-sm bg-hover border border-border px-3 py-1 text-text-secondary"
+                    className="label-sm rounded-[6px] bg-border px-3 py-1 text-foreground"
                   >
                     {tag}
                   </span>
@@ -201,7 +201,7 @@ export default function IntegrationPage({
           {relatedIntegrations.length > 0 && (
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Layers size={18} className="text-primary" />
+                <Layers size={18} className="text-foreground opacity-50" />
                 <h2 className="title-lg text-foreground">
                   More in {integration.category}
                 </h2>
@@ -211,7 +211,7 @@ export default function IntegrationPage({
                   <Link
                     key={i.id}
                     href={`/integration/${i.id}`}
-                    className="flex items-center gap-4 rounded-md border border-border bg-card p-4 shadow-sm transition-colors duration-150 hover:bg-hover"
+                    className="flex items-center gap-4 rounded-[16px] border border-border bg-card p-4 transition-all duration-150 hover:brightness-[0.9]"
                   >
                     <IntegrationLogo
                       website={i.website}
@@ -222,7 +222,7 @@ export default function IntegrationPage({
                       <p className="title-sm text-card-foreground truncate">
                         {i.name}
                       </p>
-                      <p className="body-sm text-text-secondary truncate">
+                      <p className="body-sm truncate" style={{ color: "rgba(0,0,0,0.7)" }}>
                         {i.whatItDoes}
                       </p>
                     </div>
