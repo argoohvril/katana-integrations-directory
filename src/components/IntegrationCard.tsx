@@ -43,19 +43,19 @@ export default function IntegrationCard({ integration }: IntegrationCardProps) {
         </div>
       </div>
 
-      {/* What it does + How customers use it */}
+      {/* Best for + Main use cases */}
       <div className="flex flex-col gap-2">
         <div className="flex items-start gap-2">
           <Sparkles size={13} className="shrink-0 mt-0.5 text-primary" />
-          <p className="body-sm text-card-foreground line-clamp-1">
-            <span className="text-text-secondary">What it does: </span>
+          <p className="body-sm text-card-foreground">
+            <span className="text-text-secondary">Best for: </span>
             {integration.whatItDoes}
           </p>
         </div>
         <div className="flex items-start gap-2">
           <Zap size={13} className="shrink-0 mt-0.5 text-primary" />
-          <p className="body-sm text-card-foreground line-clamp-2">
-            <span className="text-text-secondary">How customers use it: </span>
+          <p className="body-sm text-card-foreground">
+            <span className="text-text-secondary">Main use cases: </span>
             {integration.howCustomersUseIt}
           </p>
         </div>

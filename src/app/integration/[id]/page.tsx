@@ -113,7 +113,7 @@ export default function IntegrationPage({
             <div className="rounded-md border border-border bg-card p-6 shadow-sm">
               <div className="flex items-center gap-2 mb-2">
                 <Sparkles size={16} className="text-primary" />
-                <h2 className="title-sm text-card-foreground">What it does</h2>
+                <h2 className="title-sm text-card-foreground">Best for</h2>
               </div>
               <p className="body-md text-card-foreground">
                 {integration.whatItDoes}
@@ -123,7 +123,7 @@ export default function IntegrationPage({
               <div className="flex items-center gap-2 mb-2">
                 <Zap size={16} className="text-primary" />
                 <h2 className="title-sm text-card-foreground">
-                  How customers use it
+                  Main use cases
                 </h2>
               </div>
               <p className="body-md text-card-foreground">
